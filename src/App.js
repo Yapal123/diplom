@@ -10,7 +10,7 @@ import Abit from "./Abit";
 import Stud from "./Stud";
 import Contacts from "./Contacts";
 import Cabinet from "./Cabinet";
-const sliderSrc = ["/imgs/slide1.jpg", "/imgs/slide2.png", "/imgs/slide3.jpg"];
+const sliderSrc = ["/imgs/new_slide.jpg", "/imgs/slide2.png", "/imgs/slide3.jpg"];
 
 class App extends React.Component{
   constructor(props){

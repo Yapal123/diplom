@@ -28,7 +28,7 @@ class CabNav extends React.Component {
           </Link>
           <Link to="/personal-cab/messages">
             <li title="Диалоги">
-              <i class="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
             </li>
           </Link>
         </ul>
