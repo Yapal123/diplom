@@ -1,65 +1,54 @@
 import React from "react";
 import "../css/App.css";
 const groupInfo = {
-  groupName: "kn-15b",
+  groupName: "ИВТ-4 курс(заочка)",
 };
 const studInfo = [
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
+    fullName: "Колесников Август",
+    contacts: "093-77-08",
   },
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
+    fullName: "Муравьёв Гавриил",
+    contacts: "829-13-72",
   },
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
-    isHeadman: true
+    fullName: "Ефимов Клим",
+    contacts: "448-03-38",
+    isHeadman: true,
   },
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
+    fullName: "Колесников Пантелей",
+    contacts: "638-25-02",
   },
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
+    fullName: "Терентьева Лали",
+    contacts: "053-75-10",
   },
   {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
-  },
-  {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
-  },
-  {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
-  },
-  {
-    fullName: "Stas Stasik Stasichek",
-    contacts: " Any info",
+    fullName: "Моисеева Алия",
+    contacts: "495-76-82",
   },
 ];
 const lessons = [
-  ["Понедельник", "lesson1", "lesson2", "lesson3", ""],
-  ["Вторник", "lesson1", "", "", "lesson4"],
-  ["Среда", "lesson1", "lesson2", "lesson3", "lesson4"],
-  ["Четверг", "", "lesson2", "lesson3", "lesson4"],
-  ["Пятница", "", "lesson2", "lesson3", "lesson4"],
+  ["Понедельник", "ОС", "Алг.", "Мат. методы", ""],
+  ["Вторник", "Сети", "", "", "Рус. яз."],
+  ["Среда", "Англ.", "Прогр.", "Веб", "Англ"],
+  ["Четверг", "", "ОС", "Алг", "БД"],
+  ["Пятница", "", "БД", "Философия", "Матан"],
 ];
 let news = [
   {
-    title: `Title 1`,
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.`,
+    title: `Летняя сессия!`,
+    text: `1,2 норма и 1 ускоренные курсы с 16 мая 2020 года.
+2 ускоренный и 3 норма с 18 мая 2020 года.
+Расписание сессии на сайте
+https://sites.google.com/site/dzofizteh/home/raspisan..
+На сегодняшний день все экзамены и зачеты проходят дистанционно (до особого распоряжения).
+Для сдачи зачетов и экзаменов студентам необходимо связаться с преподавателями. Данные для связи переданы старостам. Если нет возможности связаться со старостой, пишите нам. Наши контакты есть в группе (в контактах). ✍🏻
+Студентам необходимо сдать зачетки в деканат (оставить на вахте т.к. в корпус не пускают).
+Оплатить обучение.❗
+📝Вызов на сессию можно получить, если вы заранее напишите или позвоните методисту. Вам подготовят документ.`,
     date: `20.03.2020`,
   },
   {
@@ -75,15 +64,16 @@ let news = [
     date: `20.03.2020`,
   },
   {
-    title: `Title 3`,
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.`,
+    title: `Летняя сессия!`,
+    text: `1,2 норма и 1 ускоренные курсы с 16 мая 2020 года.
+2 ускоренный и 3 норма с 18 мая 2020 года.
+Расписание сессии на сайте
+https://sites.google.com/site/dzofizteh/home/raspisan..
+На сегодняшний день все экзамены и зачеты проходят дистанционно (до особого распоряжения).
+Для сдачи зачетов и экзаменов студентам необходимо связаться с преподавателями. Данные для связи переданы старостам. Если нет возможности связаться со старостой, пишите нам. Наши контакты есть в группе (в контактах). ✍🏻
+Студентам необходимо сдать зачетки в деканат (оставить на вахте т.к. в корпус не пускают).
+Оплатить обучение.❗
+📝Вызов на сессию можно получить, если вы заранее напишите или позвоните методисту. Вам подготовят документ.`,
     date: `20.03.2020`,
   },
 ];  
@@ -278,13 +268,13 @@ class CabHome extends React.Component {
     if (this.state.isLead == true) {
       edit = (
         <a href="" onClick={this.groupEdit}>
-          Edit <i class="fas fa-pencil-alt"></i>
+          Ред. <i class="fas fa-pencil-alt"></i>
         </a>
       );
       trash = <i class="fas fa-trash"></i>;
       newPost = (
         <div>
-          <h4>New post</h4>
+          <h4>Новая запись</h4>
           <div className="form-group">
             <input type="text" id="newPostTitle" placeholder="post title" />
           </div>
@@ -293,7 +283,7 @@ class CabHome extends React.Component {
           </div>
           <div className="form-group">
             <button id="postNewPost" onClick={this.postNews}>
-              Post
+              Добавить
             </button>
           </div>
         </div>
@@ -331,16 +321,16 @@ class CabHome extends React.Component {
         <br />
         <br />
         <br />
-        <h2>Calendar</h2>
+        <h2>Расписание</h2>
         {edit}
         <table className="table">
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">1 lesson</th>
-              <th scope="col">2 lesson</th>
-              <th scope="col">3 lesson</th>
-              <th scope="col">4 lesson</th>
+              <th scope="col">1 пара</th>
+              <th scope="col">2 пара</th>
+              <th scope="col">3 пара</th>
+              <th scope="col">4 пара</th>
             </tr>
           </thead>
           <tbody>{calendar}</tbody>

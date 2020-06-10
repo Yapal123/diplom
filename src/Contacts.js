@@ -2,15 +2,15 @@ import React from "react";
 
 const contacts = {
   title: "Stud title",
-  addres: "Addres",
-  phone:"+380713801537",
-  email:"email@gmail.com",
-  social:[
-      {
-          name:'VK',
-          link:'vk.com'
-      },
-  ]
+  addres: "г. Донецк, пр.Театральный, 13 (корпус IV)",
+  phone: "+380 62 302-07-58",
+  email: "donnu.phys@mail.ru",
+  social: [
+    {
+      name: "VK",
+      link: "vk.com",
+    },
+  ],
 };
 class Contacts extends React.Component {
   constructor(props) {
@@ -32,17 +32,15 @@ class Contacts extends React.Component {
           {social}
           <br />
           <strong>Email: </strong>
-          {contacts.email}
+          <a href="">{contacts.email}</a>
           <br />
           <strong>Номер телефона: </strong>
           {contacts.phone}
           <br />
           <br />
           <div className="map-place">
-            <h2>
-              Карта
-            </h2>
-            <img src="imgs/map.png"/>
+            <h2>Карта</h2>
+            <img src="imgs/map.png" />
           </div>
         </p>
       </div>
